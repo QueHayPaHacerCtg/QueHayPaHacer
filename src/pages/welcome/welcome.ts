@@ -1,28 +1,29 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { InicioDeSesionPage } from '../inicio-de-sesion/inicio-de-sesion';
+import { CercaDeMPage } from '../cerca-de-m/cerca-de-m';
+import { CategoriasPage } from '../categorias/categorias';
+import { RegistroPage } from '../registro/registro';
 
-import { LoginPage } from '../login/login';
-import { SignupPage } from '../signup/signup';
-
-/**
- * The Welcome Page is a splash page that quickly describes the app,
- * and then directs the user to create an account or log in.
- * If you'd like to immediately put the user onto a login/signup page,
- * we recommend not using the Welcome page.
-*/
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController) { }
-
-  login() {
-    this.navCtrl.push(LoginPage);
+  constructor(public navCtrl: NavController) {
   }
-
-  signup() {
-    this.navCtrl.push(SignupPage);
+  goToInicioDeSesion(params){
+    if (!params) params = {};
+    this.navCtrl.push(InicioDeSesionPage);
+  }goToCategorias(params){
+    if (!params) params = {};
+    this.navCtrl.push(CategoriasPage);
+  }goToCercaDeM(params){
+    if (!params) params = {};
+    this.navCtrl.push(CercaDeMPage);
+  }goToRegistro(params){
+    if (!params) params = {};
+    this.navCtrl.push(RegistroPage);
   }
 }

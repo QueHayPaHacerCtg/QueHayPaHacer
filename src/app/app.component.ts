@@ -15,8 +15,14 @@ import { SearchPage } from '../pages/search/search';
 import { SettingsPage } from '../pages/settings/settings';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
-import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { InicioDeSesionPage } from '../pages/inicio-de-sesion/inicio-de-sesion';
+import { CategoriasPage } from '../pages/categorias/categorias';
+import { CercaDeMPage } from '../pages/cerca-de-m/cerca-de-m';
+import { ReservaExitosaPage } from '../pages/reserva-exitosa/reserva-exitosa';
+import { VidaNocturnaPage } from '../pages/vida-nocturna/vida-nocturna';
+import { ReservasEnLineaPage } from '../pages/reservas-en-linea/reservas-en-linea';
+import { RegistroPage } from '../pages/registro/registro';
 
 import { Settings } from '../providers/providers';
 
@@ -47,8 +53,14 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Tutorial', component: TutorialPage },
     { title: 'Welcome', component: WelcomePage },
+    { title: 'InicioDeSesion', component: InicioDeSesionPage },
+    { title: 'Categorias', component: CategoriasPage },
+    { title: 'CercaDeM', component: CercaDeMPage },
+    { title: 'ReservaExitosa', component: ReservaExitosaPage },
+    { title: 'VidaNocturna', component: VidaNocturnaPage },
+    { title: 'ReservasEnLinea', component: ReservasEnLineaPage },
+    { title: 'Registro', component: RegistroPage },
     { title: 'Tabs', component: TabsPage },
     { title: 'Cards', component: CardsPage },
     { title: 'Content', component: ContentPage },
@@ -81,7 +93,7 @@ export class MyApp {
     if (this.translate.getBrowserLang() !== undefined) {
       this.translate.use(this.translate.getBrowserLang());
     } else {
-      this.translate.use('en'); // Set your language here
+      this.translate.use('es'); // Set your language here
     }
 
     this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {

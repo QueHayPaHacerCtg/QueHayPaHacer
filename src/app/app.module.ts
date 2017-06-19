@@ -18,8 +18,15 @@ import { SearchPage } from '../pages/search/search';
 import { SettingsPage } from '../pages/settings/settings';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
-import { TutorialPage } from '../pages/tutorial/tutorial';
+//import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { InicioDeSesionPage } from '../pages/inicio-de-sesion/inicio-de-sesion';
+import { CategoriasPage } from '../pages/categorias/categorias';
+import { CercaDeMPage } from '../pages/cerca-de-m/cerca-de-m';
+import { ReservaExitosaPage } from '../pages/reserva-exitosa/reserva-exitosa';
+import { VidaNocturnaPage } from '../pages/vida-nocturna/vida-nocturna';
+import { ReservasEnLineaPage } from '../pages/reservas-en-linea/reservas-en-linea';
+import { RegistroPage } from '../pages/registro/registro';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -70,8 +77,15 @@ export function provideSettings(storage: Storage) {
     SettingsPage,
     SignupPage,
     TabsPage,
-    TutorialPage,
-    WelcomePage
+    //TutorialPage,
+    WelcomePage,
+    InicioDeSesionPage,
+    CategoriasPage,
+    CercaDeMPage,
+    ReservaExitosaPage,
+    VidaNocturnaPage,
+    ReservasEnLineaPage,
+    RegistroPage
   ],
   imports: [
     BrowserModule,
@@ -101,8 +115,15 @@ export function provideSettings(storage: Storage) {
     SettingsPage,
     SignupPage,
     TabsPage,
-    TutorialPage,
-    WelcomePage
+    //TutorialPage,
+    WelcomePage,
+    InicioDeSesionPage,
+    CategoriasPage,
+    CercaDeMPage,
+    ReservaExitosaPage,
+    VidaNocturnaPage,
+    ReservasEnLineaPage,
+    RegistroPage
   ],
   providers: [
     Api,

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Registro
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="background:url(assets/img/eT1ZE5KuQuehJpCop5x0_fondo-app.png) no-repeat center;background-size:cover;" id="page6">
+  <div>
+    <img src="assets/img/s2xGyKBbS6iPMfHidf4b_Logo-QueHayPaHacer-blanco.png" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />
+  </div>
+  <div class="spacer" style="width:300px;height:30px;" id="registro-spacer4"></div>
+  <form id="registro-form1">
+    <ion-item id="registro-input1">
+      <ion-label floating></ion-label>
+      <ion-input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item id="registro-input2">
+      <ion-label floating></ion-label>
+      <ion-input type="text" placeholder="Apellido" name="apellido" [(ngModel)]="apellido"></ion-input>
+    </ion-item>
+    <ion-item id="registro-input3">
+      <ion-label floating></ion-label>
+      <ion-input type="text" placeholder="Usuario" name="usuario" [(ngModel)]="usuario"></ion-input>
+    </ion-item>
+    <ion-item id="registro-input4">
+      <ion-label floating></ion-label>
+      <ion-input type="password" placeholder="Contraseña" name="newContrasena" [(ngModel)]="newContrasena"></ion-input>
+    </ion-item>
+    <ion-item id="registro-input5">
+      <ion-label floating></ion-label>
+      <ion-input type="password" placeholder="Verificar Contraseña" name="repeatContrasena" [(ngModel)]="repeatContrasena"></ion-input>
+    </ion-item>
+    <ion-item id="registro-input6">
+      <ion-label floating></ion-label>
+      <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item id="registro-input7">
+      <ion-label floating></ion-label>
+      <ion-input type="phone" placeholder="Telefono" name="telefono" [(ngModel)]="telefono"></ion-input>
+    </ion-item>
+    <div class="spacer" style="width:300px;height:22px;" id="registro-spacer5"></div>
+  </form>
+  <button id="registro-button7" ion-button outline color="light" block style="border-radius:3px 3px 3px 3px;" on-click="onPostDatos()">
+    Registrar
+  </button>
+</ion-content>

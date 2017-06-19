@@ -1,13 +1,31 @@
-<ion-content scroll="false">
-  <div class="splash-bg"></div>
-  <div class="splash-info">
-    <div class="splash-logo"></div>
-    <div class="splash-intro">
-      {{ 'WELCOME_INTRO' | translate }}
-    </div>
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Bienvenida
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="background:url(assets/img/eT1ZE5KuQuehJpCop5x0_fondo-app.png) no-repeat center;background-size:cover;"
+  id="page5">
+  <div class="spacer" style="width:300px;height:53px;" id="bienvenida-spacer1"></div>
+  <div>
+    <img src="assets/img/s2xGyKBbS6iPMfHidf4b_Logo-QueHayPaHacer-blanco.png" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;"
+    />
   </div>
-  <div padding>
-    <button ion-button block (click)="signup()" class="signup">{{ 'SIGNUP' | translate }}</button>
-    <button ion-button block (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
+  <div class="spacer" style="width:300px;height:30px;" id="bienvenida-spacer2"></div>
+  <div id="bienvenida-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+    <p style="color:#FFFFFF;">
+      TE BRINDAMOS LA INFORMACION,
+      <br /> TU ELIGES EL PLAN
+    </p>
   </div>
+  <button id="bienvenida-button3" ion-button outline color="light" block style="border-radius:3px 3px 3px 3px;" on-click="goToInicioDeSesion()">
+    Entrar
+  </button>
+  <button id="bienvenida-button4" ion-button outline color="light" block style="border-radius:3px 3px 3px 3px;" on-click="goToRegistro()">
+    Registrate
+  </button>
 </ion-content>
