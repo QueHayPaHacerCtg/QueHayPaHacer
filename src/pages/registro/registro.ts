@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map';
 })
 export class RegistroPage {
   posts: any;
-  address: string = "http://192.168.0.81:8000/api/v1/users/";
+  address: string = "http://localhost:8000/api/v1/users/";
   usuario: string = "";
   email: string = "";
   nombre: string = "";
@@ -58,7 +58,7 @@ export class RegistroPage {
       "password": this.newContrasena
     }
 
-    this.http.post("http://192.168.0.81:8000/api/v1/users/", postParams,option).subscribe(data=>{
+    this.http.post(this.address, postParams,option).subscribe(data=>{
       console.log(data['_body']);
     }, error => {
       console.log(error);
