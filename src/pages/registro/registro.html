@@ -8,8 +8,7 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding style="background:url(assets/img/fondo_registro.jpg) no-repeat center;background-size:cover;"
-  id="page6">
+<ion-content padding style="background:url(assets/img/fondo_registro.jpg) no-repeat center;background-size:cover;" id="page6">
   <div>
     <img src="assets/img/s2xGyKBbS6iPMfHidf4b_Logo-QueHayPaHacer-blanco.png" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;"
     />
@@ -52,7 +51,8 @@
     </ion-item>
     <ion-item id="registro-input8">
       <ion-label>Fecha de Nacimiento</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" doneText="Ok" cancelText="Cancelar"></ion-datetime>
+      <ion-datetime displayFormat="DD/MMMM/YYYY" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" doneText="Ok" cancelText="Cancelar"
+        placeholder="DD/MM/YYYY" monthNames="enero, febrero, marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre"></ion-datetime>
     </ion-item>
     <ion-item id="registro-input9">
       <ion-label floating></ion-label>

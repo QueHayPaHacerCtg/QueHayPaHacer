@@ -1,3 +1,30 @@
 page-categorias {
+    $searchbar-search-icon: 20px;
+
+    .button-md {
+        height: 150px;
+        padding: 50px !important;
+    }
+
+    .ion-android-bar:before,.ion-fork:before{
+        font-size: 100px;
+    }
+
+    .ion-android-cart:before,.ion-film-marker:before {
+        font-size: 92px;
+    }
+
+    .ion-pricetags:before {
+        font-size: 82px;
+    }
+
+    .ion-heart:before {
+        font-size: 87px;
+    }
+
+    .searchbar-search-icon{
+        font-size: $searchbar-search-icon !important;
+        right: 10px !important;
+    }
 
 }

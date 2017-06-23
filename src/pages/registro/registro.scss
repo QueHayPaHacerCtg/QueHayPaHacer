@@ -1,6 +1,7 @@
 page-registro {
     //Estilos para los inputs
     $text-input-placeholder-color:(#fff);
+    // $datetime-md-placeholder-color:(#fff);
     $text-input-md-highlight-color: color($colors-md, light);
        ion-item {
             background-color: transparent !important;
@@ -11,6 +12,10 @@ page-registro {
 
        ion-item ion-label {
             color: $text-input-placeholder-color !important;
+       }
+
+       .datetime-md .datetime-placeholder,.select-icon .select-icon-inner {
+            color: $text-input-md-highlight-color !important;
        }
 
     //Estilos para los botones
