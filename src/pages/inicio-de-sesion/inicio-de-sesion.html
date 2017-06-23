@@ -8,36 +8,46 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding style="background:url(assets/img/eT1ZE5KuQuehJpCop5x0_fondo-app.png) no-repeat center;background-size:cover;" id="page6">
+<ion-content padding style="background:url(assets/img/7qRCYvhjTTOWb622wNj4_fondo-app2.png) no-repeat center;background-size:cover;"
+  id="page6">
   <div>
-    <img src="assets/img/s2xGyKBbS6iPMfHidf4b_Logo-QueHayPaHacer-blanco.png" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />
+    <img src="assets/img/s2xGyKBbS6iPMfHidf4b_Logo-QueHayPaHacer-blanco.png" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;"
+    />
   </div>
   <div class="spacer" style="width:300px;height:30px;" id="inicioDeSesion-spacer4"></div>
-  <form id="inicioDeSesion-form1">
-    <ion-item id="inicioDeSesion-input1">
-      <ion-label floating></ion-label>
-      <ion-input type="text" placeholder="Usuario"></ion-input>
-    </ion-item>
-    <div class="spacer" style="width:300px;height:22px;" id="inicioDeSesion-spacer5"></div>
-    <ion-item id="inicioDeSesion-input2">
-      <ion-label floating></ion-label>
-      <ion-input type="password" placeholder="Contraseña"></ion-input>
-    </ion-item>
-  </form>
-  <button id="inicioDeSesion-button7" ion-button outline color="light" block style="border-radius:3px 3px 3px 3px;" on-click="goToCategorias()">
-    Entrar
-  </button>
-  <button id="inicioDeSesion-button10" ion-button color="positive" block style="border-radius:3px 3px 3px 3px;" on-click="goToCategorias()">
-    <ion-icon name="facebook"></ion-icon>
-    Iniciar con Facebook
-  </button>
-  <button id="inicioDeSesion-button11" ion-button color="assertive" block style="border-radius:3px 3px 3px 3px;" on-click="goToCategorias()">
-    <ion-icon name="instagram"></ion-icon>
-    Iniciar con Instagram
-  </button>
-  <div id="inicioDeSesion-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
+  <div id="bienvenida-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
     <p style="color:#FFFFFF;">
-      He olvidado mi contraseña
+      NOSOTROS TE <br/><strong>BRINDAMOS LA INFORMACION,</strong>
+      <br /> TU ELIGES EL PLAN
     </p>
   </div>
+  <div class="spacer" style="width:300px;height:15px;" id="inicioDeSesion-spacer5"></div>
+  <form id="inicioDeSesion-form1">
+    <ion-item id="inicioDeSesion-input1">
+      <ion-label><i class="ion-android-person" style="color:#FFFFFF"></i></ion-label>
+      <ion-input type="text" placeholder="USUARIO"></ion-input>
+    </ion-item>
+    <div class="spacer" style="width:300px;height:22px;" id="inicioDeSesion-spacer6"></div>
+    <ion-item id="inicioDeSesion-input2">
+      <ion-label><i class="ion-android-lock" style="color:#FFFFFF"></i></ion-label>
+      <ion-input type="password" placeholder="CONTRASEÑA"></ion-input>
+    </ion-item>
+  </form>
+
+  <div id="inicioDeSesion-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
+    <p style="color:#FFFFFF;">
+      <a style="color:white">He olvidado mi contraseña</a>
+    </p>
+  </div>
+
+  <button id="inicioDeSesion-button7" ion-button outline color="light" on-click="goToCategorias()" style="font-size: large">
+    Entrar
+  </button>
+  <button id="inicioDeSesion-button10" ion-button color="primary" on-click="goToCategorias()">
+    <p class="ion-social-facebook" style="color:#FFFFFF"> Iniciar con Facebook</p>
+  </button>
+  <button id="inicioDeSesion-button11" ion-button color="danger" on-click="goToCategorias()">
+  <p class="ion-social-instagram" style="color:#FFFFFF"> Iniciar con Instagram</p>
+  </button>
+
 </ion-content>

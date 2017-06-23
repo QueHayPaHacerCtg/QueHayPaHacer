@@ -1,3 +1,12 @@
-page-bienvenida {
+page-welcome {
+    $ancho: 50%;
+    $margen-izq: 25%;
+    $button-md-border-radius: 7px;
+    .button-md {
+        width: $ancho !important;
+        border-radius: $button-md-border-radius !important;
+        margin-left: $margen-izq !important;
+        padding: 18px !important;
+    }
 
 }
