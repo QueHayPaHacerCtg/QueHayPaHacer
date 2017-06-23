@@ -1,3 +1,26 @@
-page-inicio-de-sesion {
+page-registro {
+    //Estilos para los inputs
+    $text-input-placeholder-color:(#fff);
+    $text-input-md-highlight-color: color($colors-md, light);
+       ion-item {
+            background-color: transparent !important;
+            color: $text-input-md-highlight-color !important;
+            ::-webkit-input-placeholder{color: $text-input-placeholder-color !important}
+            font-size: larger !important;
+       }
 
+       ion-item ion-label {
+            color: $text-input-placeholder-color !important;
+       }
+
+    //Estilos para los botones
+    $ancho: 50%;
+    $margen-izq: 25%;
+    $button-md-border-radius: 7px;
+    .button-md {
+        width: $ancho !important;
+        border-radius: $button-md-border-radius !important;
+        margin-left: $margen-izq !important;
+        padding: 18px !important;
+    }
 }

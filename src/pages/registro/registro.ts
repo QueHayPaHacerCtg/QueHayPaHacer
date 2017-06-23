@@ -42,7 +42,6 @@ export class RegistroPage {
     let option = new RequestOptions({ headers: headers });
 
     let postParams = {
-      "id": 4,
       "username": this.usuario,
       "auth_token": "8829dfc1ba628aaa7dfaaca0c7766a541d5c2170",
       "email": this.email,
