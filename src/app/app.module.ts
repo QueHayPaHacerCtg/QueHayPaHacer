@@ -27,6 +27,7 @@ import { ReservaExitosaPage } from '../pages/reserva-exitosa/reserva-exitosa';
 import { VidaNocturnaPage } from '../pages/vida-nocturna/vida-nocturna';
 import { ReservasEnLineaPage } from '../pages/reservas-en-linea/reservas-en-linea';
 import { RegistroPage } from '../pages/registro/registro';
+import { LoadingSpinner } from '../services/LoadingSpinner';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -135,7 +136,7 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler }, LoadingSpinner
   ]
 })
 export class AppModule { }

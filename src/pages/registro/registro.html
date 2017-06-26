@@ -28,31 +28,31 @@
     </ion-item>
     <ion-item id="registro-input3">
       <ion-label floating></ion-label>
-      <ion-input type="text" placeholder="Usuario" name="usuario" [(ngModel)]="usuario"></ion-input>
+      <ion-input type="text" placeholder="Usuario" name="usuario" [(ngModel)]="user"></ion-input>
     </ion-item>
     <ion-item id="registro-input4">
       <ion-label floating></ion-label>
-      <ion-input type="password" placeholder="Contraseña" name="newContrasena" [(ngModel)]="newContrasena"></ion-input>
+      <ion-input type="password" placeholder="Contraseña" name="newContrasena" [(ngModel)]="pass"></ion-input>
     </ion-item>
-    <ion-item id="registro-input5">
+    <!--<ion-item id="registro-input5">
       <ion-label floating></ion-label>
       <ion-input type="password" placeholder="Verificar Contraseña" name="repeatContrasena" [(ngModel)]="repeatContrasena"></ion-input>
-    </ion-item>
+    </ion-item>-->
     <ion-item id="registro-input6">
       <ion-label floating></ion-label>
       <ion-input type="number" placeholder="Cedula" name="cedula" [(ngModel)]="cedula"></ion-input>
     </ion-item>
     <ion-item id="registro-input7">
       <ion-label>Sexo</ion-label>
-      <ion-select [(ngModel)]="genero" name="genero" okText="Ok" cancelText="Cancelar">
-        <ion-option value="F">Femenino</ion-option>
-        <ion-option value="M">Masculino</ion-option>
+      <ion-select [(ngModel)]="sexo" name="genero" okText="Ok" cancelText="Cancelar">
+        <ion-option value="Mujer">Femenino</ion-option>
+        <ion-option value="Hombre">Masculino</ion-option>
       </ion-select>
     </ion-item>
     <ion-item id="registro-input8">
       <ion-label>Fecha de Nacimiento</ion-label>
-      <ion-datetime displayFormat="DD/MMMM/YYYY" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" doneText="Ok" cancelText="Cancelar"
-        placeholder="DD/MM/YYYY" monthNames="enero, febrero, marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre"></ion-datetime>
+      <ion-datetime displayFormat="DD/MMMM/YYYY" [(ngModel)]="fecha_nacimiento" name="fecha_nacimiento" doneText="Ok" cancelText="Cancelar"
+        pickerFormat="DD MMMM YYYY" (ionChange)="show(fecha_nacimiento)" placeholder="DD/MM/YYYY" monthNames="enero, febrero, marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre"></ion-datetime>
     </ion-item>
     <ion-item id="registro-input9">
       <ion-label floating></ion-label>
@@ -61,6 +61,10 @@
     <ion-item id="registro-input10">
       <ion-label floating></ion-label>
       <ion-input type="phone" placeholder="Telefono" name="telefono" [(ngModel)]="telefono"></ion-input>
+    </ion-item>
+    <ion-item id="registro-input11">
+      <ion-label floating></ion-label>
+      <ion-input type="phone" placeholder="Movil" name="movil" [(ngModel)]="movil"></ion-input>
     </ion-item>
     <div class="spacer" style="width:300px;height:22px;" id="registro-spacer5"></div>
   </form>

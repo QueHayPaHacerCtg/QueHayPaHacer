@@ -3,7 +3,8 @@ import { NavController } from 'ionic-angular';
 import { CategoriasPage } from '../categorias/categorias';
 import { CercaDeMPage } from '../cerca-de-m/cerca-de-m';
 import { Http, Headers, RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { InicioDeSesionPage } from "../inicio-de-sesion/inicio-de-sesion";
+
 
 @Component({
   selector: 'page-registro',
@@ -11,12 +12,20 @@ import 'rxjs/add/operator/map';
 })
 export class RegistroPage {
   posts: any;
-  address: string = "http://localhost:8000/api/v1/users/";
-  usuario: string = "";
-  email: string = "";
-  nombre: string = "";
-  apellido: string = "";
-  newContrasena: string ="";
+  address: string = "http://quehaypahacer.nabu.com.co/index.php/api/usuarios";
+
+  nombre: string;
+  apellido: string;
+  cedula: string;
+  fecha_nacimiento: Date;
+  sexo: string;
+  telefono: string;
+  movil: string;
+  email: string;
+  user: string;
+  pass: string;
+
+  // newContrasena: string = "";
 
   constructor(public navCtrl: NavController, public http: Http) {
 
@@ -42,25 +51,29 @@ export class RegistroPage {
     let option = new RequestOptions({ headers: headers });
 
     let postParams = {
-      "username": this.usuario,
-      "auth_token": "8829dfc1ba628aaa7dfaaca0c7766a541d5c2170",
+      "nombre": this.nombre,
+      "apellido": this.apellido,
+      "cedula": this.cedula,
+      "fecha_nacimiento": this.fecha_nacimiento,
+      "sexo": this.sexo,
+      "telefono": this.telefono,
+      "movil": this.movil,
       "email": this.email,
-      "first_name": this.nombre,
-      "last_name": this.apellido,
-      "is_active": true,
-      "is_staff": true,
-      "is_superuser": true,
-      "date_joined": "2017-06-17T19:46:42+0000",
-      "xperience": null,
-      "bornday": null,
-      "shopper_points": null,
-      "password": this.newContrasena
+      "user": this.user,
+      "pass": this.pass,
+      "longitud": null,
+      "latitud": null
+
     }
 
-    this.http.post(this.address, postParams,option).subscribe(data=>{
-      console.log(data['_body']);
-    }, error => {
-      console.log(error);
-    });
+    return this.http.post(this.address, postParams, option)
+      .subscribe(data => {
+        if (data.status === 200) {
+          this.navCtrl.push(InicioDeSesionPage);
+        }
+      }, error => {
+        console.log(error);
+      });
   }
+
 }

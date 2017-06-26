@@ -25,12 +25,12 @@
   <form id="inicioDeSesion-form1">
     <ion-item id="inicioDeSesion-input1">
       <ion-label><i class="ion-android-person" style="color:#FFFFFF"></i></ion-label>
-      <ion-input type="text" placeholder="USUARIO"></ion-input>
+      <ion-input type="text" placeholder="USUARIO" name="usuario" [(ngModel)]="user"></ion-input>
     </ion-item>
     <div class="spacer" style="width:300px;height:22px;" id="inicioDeSesion-spacer6"></div>
     <ion-item id="inicioDeSesion-input2">
       <ion-label><i class="ion-android-lock" style="color:#FFFFFF"></i></ion-label>
-      <ion-input type="password" placeholder="CONTRASEÑA"></ion-input>
+      <ion-input type="password" placeholder="CONTRASEÑA" name="newContrasena" [(ngModel)]="pass"></ion-input>
     </ion-item>
   </form>
 
@@ -40,7 +40,7 @@
     </p>
   </div>
 
-  <button id="inicioDeSesion-button7" ion-button outline color="light" on-click="goToCategorias()" style="font-size: large">
+  <button id="inicioDeSesion-button7" ion-button outline color="light" on-click="onPostDatos()" style="font-size: large">
     Entrar
   </button>
   <button id="inicioDeSesion-button10" ion-button color="primary" on-click="goToCategorias()">
