@@ -46,5 +46,24 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-nativestorage": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-nativestorage@^2.2.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebook4": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-facebook4@^1.9.1"
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1425496617537819",
+            "APP_NAME": "quehaypahacer"
+        }
     }
 }

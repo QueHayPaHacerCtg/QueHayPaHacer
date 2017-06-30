@@ -3,6 +3,7 @@ import { Platform, Nav, Config } from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 import { CardsPage } from '../pages/cards/cards';
 import { ContentPage } from '../pages/content/content';
@@ -73,7 +74,7 @@ export class MyApp {
     { title: 'Search', component: SearchPage }
   ]
 
-  constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, private nativeStorage: NativeStorage) {
     this.initTranslate();
   }
 
@@ -81,14 +82,25 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      let env = this;
+      this.nativeStorage.getItem('user').then(function (data) {
+        // user is previously logged and we have his data
+        // we will let him access the app
+        env.nav.push(CategoriasPage);
+        this.splashScreen.hide();
+      }, function (error) {
+        //we don't have the user data so we will ask him to log in
+        env.nav.push(WelcomePage);
+        this.splashScreen.hide();
+      });
+
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
     });
   }
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
 
     if (this.translate.getBrowserLang() !== undefined) {
       this.translate.use(this.translate.getBrowserLang());

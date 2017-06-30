@@ -31,10 +31,13 @@
         "cordova-android": "^6.2.3",
         "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-device": "^1.1.4",
+        "cordova-plugin-facebook4": "^1.9.1",
+        "cordova-plugin-nativestorage": "^2.2.2",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "^2.2.2",
         "cordova-plugin-whitelist": "^1.3.1",
         "ionic-angular": "3.4.0",
+        "ionic-native": "^2.9.0",
         "ionic-plugin-keyboard": "^2.2.1",
         "ionicons": "3.0.0",
         "rxjs": "5.4.0",
@@ -43,6 +46,7 @@
     },
     "devDependencies": {
         "@ionic/app-scripts": "1.3.7",
+        "@ionic/cli-plugin-cordova": "1.4.0",
         "@ionic/cli-plugin-ionic-angular": "1.3.1",
         "typescript": "2.3.3"
     },
@@ -54,7 +58,12 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-nativestorage": {},
+            "cordova-plugin-facebook4": {
+                "APP_ID": "1425496617537819",
+                "APP_NAME": "quehaypahacer"
+            }
         },
         "platforms": [
             "android"

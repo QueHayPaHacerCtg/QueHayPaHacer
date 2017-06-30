@@ -12,7 +12,7 @@ import { InicioDeSesionPage } from "../inicio-de-sesion/inicio-de-sesion";
 })
 export class RegistroPage {
   posts: any;
-  address: string = "http://quehaypahacer.nabu.com.co/index.php/api/usuarios";
+  address: string = "https://quehaypahacer.nabu.com.co/index.php/api/usuarios";
 
   nombre: string;
   apellido: string;

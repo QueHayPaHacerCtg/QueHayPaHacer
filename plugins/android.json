@@ -24,6 +24,14 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "io.ionic.quehaypahacer"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1425496617537819",
+            "APP_NAME": "quehaypahacer",
+            "PACKAGE_NAME": "io.ionic.starter"
         }
     },
     "dependent_plugins": {}
