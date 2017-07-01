@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
+import { NativeStorage } from 'ionic-native';
 import { CategoriasPage } from '../categorias/categorias';
 import { CercaDeMPage } from '../cerca-de-m/cerca-de-m';
 import { Http, Headers, RequestOptions } from '@angular/http';
@@ -8,7 +9,8 @@ import { InicioDeSesionPage } from "../inicio-de-sesion/inicio-de-sesion";
 
 @Component({
   selector: 'page-registro',
-  templateUrl: 'registro.html'
+  templateUrl: 'registro.html',
+  providers: [NativeStorage]
 })
 export class RegistroPage {
   posts: any;
@@ -24,10 +26,37 @@ export class RegistroPage {
   email: string;
   user: string;
   pass: string;
+  data: any;
 
   // newContrasena: string = "";
 
-  constructor(public navCtrl: NavController, public http: Http) {
+  constructor(public navCtrl: NavController, public http: Http, public nativeStorage: NativeStorage, private alertCtrl: AlertController) {
+  }
+
+  ionViewDidLoad() {
+    NativeStorage.getItem('user').then(data =>
+      this.data = data,
+      error =>
+        console.log("OK")
+    );
+  }
+
+  ionViewWillEnter() {
+    if (this.data !== undefined) {
+      let segundoNombre = this.data.middle_name = "undefined" ? "" : this.data.middle_name;
+      this.nombre = this.data.first_name + " " + segundoNombre;
+      this.apellido = this.data.last_name;
+      this.fecha_nacimiento = this.data.birth = "undefined" ? this.fecha_nacimiento = null : this.data.birth.split('/').reverse().join('-');
+      this.sexo = this.data.gender = 'male' ? "Hombre" : "Mujer";
+      this.email = this.data.email;
+
+      let alert = this.alertCtrl.create({
+        title: 'Solo falta un paso más!',
+        message: 'Ya hemos obtenido algunos de tus datos, pero necesitamos que completes el resto para que puedas disfrutar de todas las funcionalidades de la aplicación.',
+        buttons: ['OK']
+      });
+      alert.present();
+    }
 
   }
   goToCategorias(params) {

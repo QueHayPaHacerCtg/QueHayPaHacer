@@ -17,8 +17,8 @@
     <access origin="https://api.facebook.com" />
     <access origin="https://*.fbcdn.net" />
     <access origin="https://*.akamaihd.net" />
-    <name>MyApp</name>
-    <description>An awesome Ionic/Cordova app.</description>
+    <name>Que Hay Pa' Hacer Cartagena</name>
+    <description>Encuentra toda la información relacionada con los mejores planes en Cartagena.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
