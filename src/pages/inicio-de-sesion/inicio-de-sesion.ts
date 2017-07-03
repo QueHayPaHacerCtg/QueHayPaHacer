@@ -16,10 +16,30 @@ export class InicioDeSesionPage {
   FB_APP_ID: number = 1425496617537819;
   user: string;
   pass: string;
+  data: any;
 
   constructor(public navCtrl: NavController, public http: Http, public loadingSpinner: LoadingController,
     public facebook: Facebook, public nativeStorage: NativeStorage, private alertCtrl: AlertController) {
     Facebook.browserInit(this.FB_APP_ID, "v2.9");
+  }
+
+  ionViewDidLoad() {
+    NativeStorage.getItem('responseSocialNet').then(data =>
+      this.data = data.tipoAutenticacion,
+      error =>
+        console.log("No hay tipoAutenticacion")
+    );
+  }
+
+  ionViewWillEnter() {
+    if (this.data === null || this.data === "null") {
+      let alert = this.alertCtrl.create({
+        title: 'Bienvenido!',
+        message: "Bienvenido a <strong>Qué Hay Pa' Hacer Cartagena</strong>. Ya puedes iniciar sesión. Tus datos han sido guardados correctamente.",
+        buttons: ['¡Bien!']
+      });
+      alert.present();
+    }
   }
 
   goToCategorias(params) {
@@ -128,7 +148,9 @@ export class InicioDeSesionPage {
                 last_name: user.last_name,
                 gender: user.gender,
                 email: user.email,
-                birth: user.birthday
+                birth: user.birthday,
+                picture: user.picture,
+                id: user.id
               })
               .then(function () {
                 nav.push(RegistroPage);

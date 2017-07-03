@@ -5,17 +5,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
 
-import { CardsPage } from '../pages/cards/cards';
-import { ContentPage } from '../pages/content/content';
-import { FirstRunPage } from '../pages/pages';
-import { ListMasterPage } from '../pages/list-master/list-master';
-import { LoginPage } from '../pages/login/login';
-import { MapPage } from '../pages/map/map';
-import { MenuPage } from '../pages/menu/menu';
-import { SearchPage } from '../pages/search/search';
-import { SettingsPage } from '../pages/settings/settings';
-import { SignupPage } from '../pages/signup/signup';
-import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { InicioDeSesionPage } from '../pages/inicio-de-sesion/inicio-de-sesion';
 import { CategoriasPage } from '../pages/categorias/categorias';
@@ -49,7 +38,7 @@ import { TranslateService } from '@ngx-translate/core'
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = WelcomePage;
 
   @ViewChild(Nav) nav: Nav;
 
@@ -62,16 +51,6 @@ export class MyApp {
     { title: 'VidaNocturna', component: VidaNocturnaPage },
     { title: 'ReservasEnLinea', component: ReservasEnLineaPage },
     { title: 'Registro', component: RegistroPage },
-    { title: 'Tabs', component: TabsPage },
-    { title: 'Cards', component: CardsPage },
-    { title: 'Content', component: ContentPage },
-    { title: 'Login', component: LoginPage },
-    { title: 'Signup', component: SignupPage },
-    { title: 'Map', component: MapPage },
-    { title: 'Master Detail', component: ListMasterPage },
-    { title: 'Menu', component: MenuPage },
-    { title: 'Settings', component: SettingsPage },
-    { title: 'Search', component: SearchPage }
   ]
 
   constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, private nativeStorage: NativeStorage) {
@@ -86,6 +65,7 @@ export class MyApp {
       this.nativeStorage.getItem('user').then(function (data) {
         // user is previously logged and we have his data
         // we will let him access the app
+        // this.nav.setRoot(CategoriasPage);
         env.nav.push(CategoriasPage);
         this.splashScreen.hide();
       }, function (error) {
