@@ -10,14 +10,15 @@ import { NativeStorage } from '@ionic-native/native-storage';
 })
 export class CategoriasPage {
   rootPage = CategoriasPage;
+  
   @ViewChild(Nav) nav: Nav;
   constructor(public navCtrl: NavController, private nativeStorage: NativeStorage) {
   }
 
-  ionViewDidLoad() {
-    let env = this;
-    env.nav.setRoot(CategoriasPage);
-  }
+  // ionViewDidLoad() {
+  //   let env = this;
+  //   env.nav.setRoot(this);
+  // }
   goToCercaDeM(params) {
     if (!params) params = {};
     this.navCtrl.push(CercaDeMPage);

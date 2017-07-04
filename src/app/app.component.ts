@@ -62,16 +62,16 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       let env = this;
-      this.nativeStorage.getItem('user').then(function (data) {
+      env.nativeStorage.getItem('user').then(function (data) {
         // user is previously logged and we have his data
         // we will let him access the app
-        // this.nav.setRoot(CategoriasPage);
+        env.nav.setRoot(CategoriasPage);
         env.nav.push(CategoriasPage);
-        this.splashScreen.hide();
+        env.splashScreen.hide();
       }, function (error) {
         //we don't have the user data so we will ask him to log in
         env.nav.push(WelcomePage);
-        this.splashScreen.hide();
+        env.splashScreen.hide();
       });
 
       this.statusBar.styleDefault();

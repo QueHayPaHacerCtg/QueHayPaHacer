@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { NavController, LoadingController, AlertController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, LoadingController, AlertController, Nav } from 'ionic-angular';
 import { Facebook, NativeStorage } from 'ionic-native';
 import { CategoriasPage } from '../categorias/categorias';
 import { RegistroPage } from '../registro/registro';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import 'rxjs/add/operator/catch';
 
 @Component({
   selector: 'page-inicio-de-sesion',
@@ -17,11 +18,14 @@ export class InicioDeSesionPage {
   user: string;
   pass: string;
   data: any;
+  response: any;
 
   constructor(public navCtrl: NavController, public http: Http, public loadingSpinner: LoadingController,
     public facebook: Facebook, public nativeStorage: NativeStorage, private alertCtrl: AlertController) {
     Facebook.browserInit(this.FB_APP_ID, "v2.9");
   }
+
+  @ViewChild(Nav) nav: Nav;
 
   ionViewDidLoad() {
     NativeStorage.getItem('responseSocialNet').then(data =>
@@ -67,7 +71,7 @@ export class InicioDeSesionPage {
       headers.append("Accept", 'application/json');
       headers.append('Content-Type', 'application/json');
       let option = new RequestOptions({ headers: headers });
-
+      let env = this;
       let postParams = {
         "user": this.user,
         "pass": this.pass
@@ -79,7 +83,17 @@ export class InicioDeSesionPage {
             setTimeout(() => {
               loading.dismiss();
             }, data);
-            this.navCtrl.push(CategoriasPage);
+            this.response = data.json();
+            NativeStorage.setItem('user',
+              {
+                token: this.response
+              })
+              .then(function () {
+                env.navCtrl.push(CategoriasPage);
+                console.log("TODO OK!");
+              }, function (error) {
+                console.log(error);
+              })
           }
         }, error => {
           loading.dismiss();

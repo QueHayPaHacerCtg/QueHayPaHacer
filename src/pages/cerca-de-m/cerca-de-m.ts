@@ -9,16 +9,16 @@ import { ReservaExitosaPage } from '../reserva-exitosa/reserva-exitosa';
   templateUrl: 'cerca-de-m.html'
 })
 export class CercaDeMPage {
-
+  hoy: String = new Date().toISOString();
   constructor(public navCtrl: NavController) {
   }
-  goToVidaNocturna(params){
+  goToVidaNocturna(params) {
     if (!params) params = {};
     this.navCtrl.push(VidaNocturnaPage);
-  }goToReservasEnLinea(params){
+  } goToReservasEnLinea(params) {
     if (!params) params = {};
     this.navCtrl.push(ReservasEnLineaPage);
-  }goToReservaExitosa(params){
+  } goToReservaExitosa(params) {
     if (!params) params = {};
     this.navCtrl.push(ReservaExitosaPage);
   }
