@@ -3,6 +3,7 @@ import { NavController, LoadingController, AlertController, Nav } from 'ionic-an
 import { Facebook, NativeStorage } from 'ionic-native';
 import { CategoriasPage } from '../categorias/categorias';
 import { RegistroPage } from '../registro/registro';
+import { TabsPage } from '../tabs/tabs';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/catch';
 
@@ -89,7 +90,7 @@ export class InicioDeSesionPage {
                 token: this.response
               })
               .then(function () {
-                env.navCtrl.push(CategoriasPage);
+                env.navCtrl.push(TabsPage);
                 console.log("TODO OK!");
               }, function (error) {
                 console.log(error);

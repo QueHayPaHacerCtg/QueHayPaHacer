@@ -13,32 +13,17 @@ import { ReservaExitosaPage } from '../pages/reserva-exitosa/reserva-exitosa';
 import { VidaNocturnaPage } from '../pages/vida-nocturna/vida-nocturna';
 import { ReservasEnLineaPage } from '../pages/reservas-en-linea/reservas-en-linea';
 import { RegistroPage } from '../pages/registro/registro';
+import { TabsPage } from '../pages/tabs/tabs';
 
 import { Settings } from '../providers/providers';
 
 import { TranslateService } from '@ngx-translate/core'
 
 @Component({
-  template: `<ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Opciones</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of paginas" (click)="abrirPagina(p)">
-          {{p.titulo}}
-        </button>
-      </ion-list>
-    </ion-content>
-
-  </ion-menu>
-  <ion-nav #content [root]="rootPage"></ion-nav>`
+  templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = WelcomePage;
+  rootPage:any = WelcomePage;
 
   @ViewChild(Nav) nav: Nav;
 
@@ -57,8 +42,8 @@ export class MyApp {
         // user is previously logged and we have his data
         // we will let him access the app
 
-        env.nav.setRoot(CategoriasPage);
-        // env.nav.push(CategoriasPage);
+        // env.nav.setRoot(CategoriasPage);
+        env.nav.push(TabsPage);
         env.splashScreen.hide();
 
       }, function (error) {

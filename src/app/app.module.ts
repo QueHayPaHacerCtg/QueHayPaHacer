@@ -16,6 +16,7 @@ import { VidaNocturnaPage } from '../pages/vida-nocturna/vida-nocturna';
 import { ReservasEnLineaPage } from '../pages/reservas-en-linea/reservas-en-linea';
 import { RegistroPage } from '../pages/registro/registro';
 import { LoadingSpinner } from '../services/LoadingSpinner';
+import { TabsPage } from '../pages/tabs/tabs';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -64,7 +65,8 @@ export function provideSettings(storage: Storage) {
     ReservaExitosaPage,
     VidaNocturnaPage,
     ReservasEnLineaPage,
-    RegistroPage
+    RegistroPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -89,7 +91,8 @@ export function provideSettings(storage: Storage) {
     ReservaExitosaPage,
     VidaNocturnaPage,
     ReservasEnLineaPage,
-    RegistroPage
+    RegistroPage,
+    TabsPage
   ],
   providers: [
     Api,
