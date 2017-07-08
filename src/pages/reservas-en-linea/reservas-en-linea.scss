@@ -1,3 +1,13 @@
 page-reservas-en-linea {
-
+    $text-input-placeholder-color:(#000);
+    $text-input-md-highlight-color: color($colors-md, light);
+    ion-item {
+        background-color: transparent !important;
+        color: $text-input-md-highlight-color !important;
+        ::-webkit-input-placeholder{color: $text-input-placeholder-color !important}
+        font-size: larger !important;
+    }
+    ion-item ion-label {
+        color: $text-input-placeholder-color !important;
+    }
 }

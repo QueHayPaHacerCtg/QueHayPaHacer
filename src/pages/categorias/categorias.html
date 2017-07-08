@@ -1,4 +1,4 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -6,8 +6,17 @@
     <ion-title>
       Categorias
     </ion-title>
+    <ion-content>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of paginas" (click)="abrirPagina(p)">
+          {{p.titulo}}
+        </button>
+      </ion-list>
+    </ion-content>
   </ion-navbar>
-</ion-header>
+</ion-header>-->
+
+
 <ion-content padding style="background:url(assets/img/7qRCYvhjTTOWb622wNj4_fondo-app2.png) no-repeat center;background-size:cover;"
   id="page2">
   <form id="categorias-form3">

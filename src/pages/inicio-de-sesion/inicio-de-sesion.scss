@@ -2,7 +2,7 @@ page-inicio-de-sesion {
     //Estilos para los inputs
     $text-input-placeholder-color:(#D8D8D8);
     $text-input-md-highlight-color: color($colors-md, light);
-       ion-item {
+    ion-item {
         background-color: transparent !important;
         color: $text-input-md-highlight-color !important;
         ::-webkit-input-placeholder{color: $text-input-placeholder-color !important}

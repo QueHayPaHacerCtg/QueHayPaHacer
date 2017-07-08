@@ -22,6 +22,7 @@
         "@angular/platform-browser-dynamic": "4.1.3",
         "@ionic-native/camera": "3.12.1",
         "@ionic-native/core": "3.10.2",
+        "@ionic-native/geolocation": "^3.14.0",
         "@ionic-native/google-maps": "3.12.1",
         "@ionic-native/splash-screen": "3.10.2",
         "@ionic-native/status-bar": "3.10.2",
@@ -29,9 +30,11 @@
         "@ngx-translate/core": "6.0.1",
         "@ngx-translate/http-loader": "0.0.3",
         "cordova-android": "^6.2.3",
+        "cordova-plugin-compat": "^1.0.0",
         "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-facebook4": "^1.9.1",
+        "cordova-plugin-geolocation": "^2.4.3",
         "cordova-plugin-nativestorage": "^2.2.2",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "^2.2.2",
@@ -63,7 +66,8 @@
             "cordova-plugin-facebook4": {
                 "APP_ID": "1425496617537819",
                 "APP_NAME": "quehaypahacer"
-            }
+            },
+            "cordova-plugin-geolocation": {}
         },
         "platforms": [
             "android"

@@ -22,14 +22,14 @@ import { TranslateService } from '@ngx-translate/core'
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+        <ion-title>Opciones</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content>
       <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
+        <button menuClose ion-item *ngFor="let p of paginas" (click)="abrirPagina(p)">
+          {{p.titulo}}
         </button>
       </ion-list>
     </ion-content>
@@ -42,22 +42,13 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  pages: any[] = [
-    { title: 'Welcome', component: WelcomePage },
-    { title: 'InicioDeSesion', component: InicioDeSesionPage },
-    { title: 'Categorias', component: CategoriasPage },
-    { title: 'CercaDeM', component: CercaDeMPage },
-    { title: 'ReservaExitosa', component: ReservaExitosaPage },
-    { title: 'VidaNocturna', component: VidaNocturnaPage },
-    { title: 'ReservasEnLinea', component: ReservasEnLineaPage },
-    { title: 'Registro', component: RegistroPage },
+  paginas: any[] = [
+    { titulo: 'Cerrar Sesión', component: WelcomePage }
   ]
 
   constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, private nativeStorage: NativeStorage) {
     this.initTranslate();
-  }
 
-  ionViewDidLoad() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -65,9 +56,11 @@ export class MyApp {
       env.nativeStorage.getItem('user').then(function (data) {
         // user is previously logged and we have his data
         // we will let him access the app
+
         env.nav.setRoot(CategoriasPage);
-        env.nav.push(CategoriasPage);
+        // env.nav.push(CategoriasPage);
         env.splashScreen.hide();
+
       }, function (error) {
         //we don't have the user data so we will ask him to log in
         env.nav.push(WelcomePage);
@@ -93,9 +86,9 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
+  abrirPagina(pagina) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.setRoot(pagina.component);
   }
 }

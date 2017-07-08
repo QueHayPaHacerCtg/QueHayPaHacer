@@ -7,10 +7,10 @@ import { ReservaExitosaPage } from '../reserva-exitosa/reserva-exitosa';
   templateUrl: 'reservas-en-linea.html'
 })
 export class ReservasEnLineaPage {
-
+  hoy: String = new Date().toISOString();
   constructor(public navCtrl: NavController) {
   }
-  goToReservaExitosa(params){
+  goToReservaExitosa(params) {
     if (!params) params = {};
     this.navCtrl.push(ReservaExitosaPage);
   }

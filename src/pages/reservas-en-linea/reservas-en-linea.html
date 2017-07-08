@@ -8,17 +8,12 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding style="background:url(assets/img/7qRCYvhjTTOWb622wNj4_fondo-app2.png) no-repeat center;background-size:cover;background-color:#FFFFFF;" id="page9">
-  <form id="reservasEnLinea-form5">
+<ion-content padding style="background-color:#FFFFFF;" id="page9">
+  <!--<form id="reservasEnLinea-form5">
     <ion-searchbar placeholder="RESERVA EN LÍNEA" name="" id="reservasEnLinea-search3"></ion-searchbar>
-  </form>
-  <div id="reservasEnLinea-markdown13" style="text-align:right;" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      <strong>
-        SABADO
-      </strong>
-      , 17 DE JUNIO, 2017
-    </p>
+  </form>-->
+  <div id="reservasEnLinea-markdown13" style="text-align:right;">
+      <br><p class="text-uppercase">{{hoy | date:'fullDate'}}</p>
   </div>
   <div id="reservasEnLinea-markdown14" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
@@ -31,8 +26,7 @@
     <p style="color:#000000;">
       <strong>
         FRAGMA CLUB
-      </strong>
-      (CENTRO, CRA#36-86)
+      </strong> (CENTRO, CRA#36-86)
     </p>
   </div>
   <ion-list id="reservasEnLinea-list3">
@@ -43,8 +37,7 @@
       <h2>
         <strong>
           PROMO:
-        </strong>
-        NO REGISTRA
+        </strong> NO REGISTRA
       </h2>
     </ion-item>
   </ion-list>
@@ -130,9 +123,9 @@
       <ion-label>
         Acepta los términos y condiciones
       </ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-checkbox [(ngModel)]="aceptaTerminos" name="aceptaTerminos"></ion-checkbox>
     </ion-item>
-    <button id="reservasEnLinea-button14" ion-button color="balanced" block on-click="goToReservaExitosa()">
+    <button id="reservasEnLinea-button14" [disabled]="!aceptaTerminos" ion-button color="balanced" block on-click="goToReservaExitosa()">
       Reservar
     </button>
   </form>
