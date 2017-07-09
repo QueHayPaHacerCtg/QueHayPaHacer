@@ -5,6 +5,7 @@ import { CategoriasPage } from '../categorias/categorias';
 import { RegistroPage } from '../registro/registro';
 import { TabsPage } from '../tabs/tabs';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { Auth, User } from '@ionic/cloud-angular';
 import 'rxjs/add/operator/catch';
 
 @Component({
@@ -22,7 +23,8 @@ export class InicioDeSesionPage {
   response: any;
 
   constructor(public navCtrl: NavController, public http: Http, public loadingSpinner: LoadingController,
-    public facebook: Facebook, public nativeStorage: NativeStorage, private alertCtrl: AlertController) {
+    public facebook: Facebook, public nativeStorage: NativeStorage, private alertCtrl: AlertController,
+    public authInst: Auth, public userInst: User) {
     Facebook.browserInit(this.FB_APP_ID, "v2.9");
   }
 
@@ -85,7 +87,7 @@ export class InicioDeSesionPage {
               loading.dismiss();
             }, data);
             this.response = data.json();
-            NativeStorage.setItem('user',
+            NativeStorage.setItem('userFB',
               {
                 token: this.response
               })
@@ -180,6 +182,11 @@ export class InicioDeSesionPage {
         console.log(error);
         alert.present();
       });
+  }
+  doInstagramLogin() {
+    this.authInst.login('instagram').then(function(data) {
+      console.log(data);
+    });
   }
 
 }

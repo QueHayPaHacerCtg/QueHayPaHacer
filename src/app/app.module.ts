@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage, IonicStorageModule } from '@ionic/storage';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
 import { MyApp } from './app.component';
 
@@ -55,6 +56,12 @@ export function provideSettings(storage: Storage) {
   });
 }
 
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '765d228d'
+  }
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -71,6 +78,7 @@ export function provideSettings(storage: Storage) {
   imports: [
     BrowserModule,
     HttpModule,
+    CloudModule.forRoot(cloudSettings),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
