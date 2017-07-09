@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav, Config } from 'ionic-angular';
+import { Platform, Nav, Config, AlertController } from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,6 +14,7 @@ import { VidaNocturnaPage } from '../pages/vida-nocturna/vida-nocturna';
 import { ReservasEnLineaPage } from '../pages/reservas-en-linea/reservas-en-linea';
 import { RegistroPage } from '../pages/registro/registro';
 import { TabsPage } from '../pages/tabs/tabs';
+import { Push, PushToken } from '@ionic/cloud-angular';
 
 import { Settings } from '../providers/providers';
 
@@ -23,7 +24,8 @@ import { TranslateService } from '@ngx-translate/core'
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = WelcomePage;
+  rootPage: any = WelcomePage;
+  alert: any;
 
   @ViewChild(Nav) nav: Nav;
 
@@ -31,7 +33,10 @@ export class MyApp {
     { titulo: 'Cerrar Sesión', component: WelcomePage }
   ]
 
-  constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, private nativeStorage: NativeStorage) {
+  constructor(private translate: TranslateService, private platform: Platform,
+    settings: Settings, private config: Config, private statusBar: StatusBar,
+    private splashScreen: SplashScreen, private nativeStorage: NativeStorage,
+    public push: Push, private alertCtrl: AlertController) {
     this.initTranslate();
 
     this.platform.ready().then(() => {
@@ -52,8 +57,72 @@ export class MyApp {
         env.splashScreen.hide();
       });
 
+      this.push.register().then((t: PushToken) => {
+        return this.push.saveToken(t);
+      }).then((t: PushToken) => {
+        console.log('Token saved:', t.token);
+      });
+
+      this.push.rx.notification()
+        .subscribe((msg) => {
+          alert(msg.title + ': ' + msg.text);
+        });
+
+      platform.registerBackButtonAction(() => {
+
+
+        //uncomment this and comment code below to to show toast and exit app
+        // if (this.backButtonPressedOnceToExit) {
+        //   this.platform.exitApp();
+        // } else if (this.nav.canGoBack()) {
+        //   this.nav.pop({});
+        // } else {
+        //   this.showToast();
+        //   this.backButtonPressedOnceToExit = true;
+        //   setTimeout(() => {
+
+        //     this.backButtonPressedOnceToExit = false;
+        //   },2000)
+        // }
+
+        if (this.nav.getActive().name === 'TabsPage') {
+          console.log('estoy en los tabs!');
+          this.showAlert();
+        } else {
+          if (env.alert) {
+            env.alert.dismiss();
+            env.alert = null;
+          } else {
+            env.nav.pop();
+          }
+        }
+      });
+
       this.statusBar.styleDefault();
     });
+  }
+
+  showAlert() {
+    this.alert = this.alertCtrl.create({
+      title: 'Salir?',
+      message: 'Deseas salir de la app?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () => {
+            this.alert = null;
+          }
+        },
+        {
+          text: 'Salir',
+          handler: () => {
+            this.platform.exitApp();
+          }
+        }
+      ]
+    });
+    this.alert.present();
   }
 
   initTranslate() {

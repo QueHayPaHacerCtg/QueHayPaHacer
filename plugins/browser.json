@@ -17,6 +17,10 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "939151682913",
+            "PACKAGE_NAME": "io.ionic.quehaypahacer"
         }
     },
     "dependent_plugins": {

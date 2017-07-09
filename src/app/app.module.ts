@@ -4,6 +4,9 @@ import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+import {
+ 
+} from '@ionic/cloud-angular';
 
 import { MyApp } from './app.component';
 
@@ -59,6 +62,18 @@ export function provideSettings(storage: Storage) {
 const cloudSettings: CloudSettings = {
   'core': {
     'app_id': '765d228d'
+  },
+  'push': {
+    'sender_id': '939151682913',
+    'pluginConfig': {
+      'ios': {
+        'badge': true,
+        'sound': true
+      },
+      'android': {
+        'iconColor': '#343434'
+      }
+    }
   }
 };
 

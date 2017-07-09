@@ -87,7 +87,7 @@ export class InicioDeSesionPage {
               loading.dismiss();
             }, data);
             this.response = data.json();
-            NativeStorage.setItem('userFB',
+            NativeStorage.setItem('user',
               {
                 token: this.response
               })
@@ -158,7 +158,7 @@ export class InicioDeSesionPage {
             console.log(user);
             user.picture = "https://graph.facebook.com/" + userId + "/picture?type=large";
             //now we have the users info, let's save it in the NativeStorage
-            NativeStorage.setItem('user',
+            NativeStorage.setItem('userFB',
               {
                 first_name: user.first_name,
                 middle_name: user.middle_name,

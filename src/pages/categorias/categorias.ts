@@ -10,9 +10,10 @@ import { NativeStorage } from '@ionic-native/native-storage';
 })
 export class CategoriasPage {
   // rootPage = CategoriasPage;
-  
+
   @ViewChild(Nav) nav: Nav;
   constructor(public navCtrl: NavController, private nativeStorage: NativeStorage) {
+    
   }
 
   paginas: any[] = [
