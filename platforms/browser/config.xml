@@ -17,7 +17,7 @@
     <access origin="https://api.facebook.com" />
     <access origin="https://*.fbcdn.net" />
     <access origin="https://*.akamaihd.net" />
-    <name>Que Hay Pa' Hacer Cartagena</name>
+    <name>Que Hay Pa' Hacer</name>
     <description>Encuentra toda la información relacionada con los mejores planes en Cartagena.</description>
     <author email="quehaypahacerctg@gmail.com" href="http://ionicframework.com/">Que Hay Pa' Hacer Cartagena</author>
     <content src="index.html" />

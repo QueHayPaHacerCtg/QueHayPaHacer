@@ -17,11 +17,7 @@ import { CercaDeMPage } from '../cerca-de-m/cerca-de-m';
 export class TabsPage {
   tab1Root = CategoriasPage;
   tab2Root = CercaDeMPage;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TabsPage');
-  }
-
 }

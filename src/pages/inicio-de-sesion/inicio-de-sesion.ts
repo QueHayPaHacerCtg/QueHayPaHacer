@@ -82,6 +82,7 @@ export class InicioDeSesionPage {
 
       return this.http.post(this.address, postParams, option)
         .subscribe(data => {
+          console.log(data);
           if (data.status === 200) {
             setTimeout(() => {
               loading.dismiss();
