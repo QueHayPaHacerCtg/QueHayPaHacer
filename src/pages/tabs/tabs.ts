@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CategoriasPage } from '../categorias/categorias';
-import { CercaDeMPage } from '../cerca-de-m/cerca-de-m';
+// import { CercaDeMPage } from '../cerca-de-m/cerca-de-m';
 
 /**
  * Generated class for the TabsPage page.
@@ -16,7 +16,7 @@ import { CercaDeMPage } from '../cerca-de-m/cerca-de-m';
 })
 export class TabsPage {
   tab1Root = CategoriasPage;
-  tab2Root = CercaDeMPage;
+  // tab2Root = CercaDeMPage;
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

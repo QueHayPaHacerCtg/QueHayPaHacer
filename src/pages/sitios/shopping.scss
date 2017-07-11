@@ -1,0 +1,31 @@
+page-shopping {
+    input.searchbar-input {background-color: transparent !important;}
+    $item-md-detail-push-show: true;
+    .list-md{margin:-13px 0 16px !important;}
+    ion-avatar img{
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    hr {
+        margin-bottom: 20px !important;
+        background-color:gray !important;
+    }
+
+    .searchbar-input {
+        height: 80px !important;
+        opacity: 0.5;
+        margin-bottom: -15px;
+        // background-color: transparent;
+    }
+
+    .searchbar-md {
+        padding: 0px !important;
+    }
+
+    .searchbar-md .searchbar-search-icon{
+        left: 175px !important;
+        zoom:2.0;
+        color: transparent;
+    }
+}

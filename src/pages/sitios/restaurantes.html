@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Restaurantes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding style="background-size:cover;background-color:#FFFFFF;" id="page3">
+  <form id="vidaNocturna-form4">
+    <ion-searchbar placeholder="RESTAURANTES" name="" id="vidaNocturna-search2"></ion-searchbar>
+  </form>
+  <div padding-horizontal style="background-color:white;">
+    <div id="cercaDeM-markdown4" style="text-align:right;" class="show-list-numbers-and-dots">
+      <br>
+      <p>{{hoy | date:'fullDate'}}</p>
+    </div>
+    <div>
+      <ion-list>
+        <h5 no-margin><strong>La Vitrola</strong></h5>
+        <ion-item detail-none on-click="goToLaVitrola()">
+          <ion-avatar item-start>
+            <img src="assets/img/la_vitrola.jpg">
+          </ion-avatar>
+          <p>Centro, Cra 2#36-86</p>
+          <p text-wrap style="font-size: 13px"><strong>Promo:</strong> NO REGISTRA</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 10:00 P.M A 4:00 P.M</p>
+          <p text-wrap style="font-size: 13px"><strong>Tipo:</strong> Comida Típica - Musica en Vivo</p>
+          <p text-wrap style="font-size: 13px"><strong>Especialidad:</strong> Carimañolas de Camarón</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+        <h5 no-margin><strong>DF Doña Frida</strong></h5>
+        <ion-item detail-none on-click="goToDonaFrida()">
+          <ion-avatar item-start>
+            <img src="assets/img/dona_frida.jpg">
+          </ion-avatar>
+          <p>Bocagrande, Cra 4#18-21</p>
+          <p text-wrap style="font-size: 13px"><strong>Promo:</strong> 2x1 en Margaritas</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 10:00 P.M A 4:00 P.M</p>
+          <p text-wrap style="font-size: 13px"><strong>Tipo:</strong> Comida Mexicana</p>
+          <p text-wrap style="font-size: 13px"><strong>Especialidad:</strong> Quesadillas</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+        <h5 no-margin><strong>La Girolata</strong></h5>
+        <ion-item detail-none on-click="goToLaGirolata()">
+          <ion-avatar item-start>
+            <img src="assets/img/la-girolata.jpg">
+          </ion-avatar>
+          <p>Centro, Cra 2#36-86</p>
+          <p text-wrap style="font-size: 13px"><strong>Promo:</strong> NO REGISTRA</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 7:30 P.M A 12:00 A.M</p>
+          <p text-wrap style="font-size: 13px"><strong>Tipo:</strong> Comida Italiana</p>
+          <p text-wrap style="font-size: 13px"><strong>Especialidad:</strong> Spaghettis Frutos del Mar</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+        <h5 no-margin><strong>Salou</strong></h5>
+        <ion-item detail-none on-click="goToSalou()">
+          <ion-avatar item-start>
+            <img src="assets/img/salou.jpg">
+          </ion-avatar>
+          <p>Bocagrande, C.C. La Mansión Local 24-25</p>
+          <p text-wrap style="font-size: 13px"><strong>Promo:</strong> Entrada 2x1</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 5:00 P.M A 11:30 P.M</p>
+          <p text-wrap style="font-size: 13px"><strong>Tipo:</strong> Comida Fusión</p>
+          <p text-wrap style="font-size: 13px"><strong>Especialidad:</strong> Langostinos al Ajillo</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

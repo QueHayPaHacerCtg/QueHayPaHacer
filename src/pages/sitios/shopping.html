@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Shopping
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding style="background-color:#FFFFFF;" id="page3">
+  <form id="vidaNocturna-form4">
+    <ion-searchbar placeholder="Shopping" name="" id="vidaNocturna-search2"></ion-searchbar>
+  </form>
+  <div padding-horizontal style="background-color:white;">
+    <div id="cercaDeM-markdown4" style="text-align:right;" class="show-list-numbers-and-dots">
+      <br>
+      <p>{{hoy | date:'fullDate'}}</p>
+    </div>
+    <div>
+      <ion-list>
+        <h5 no-margin><strong>Centro Comercial Mall Plaza</strong></h5>
+        <ion-item detail-none on-click="goToVidaNocturna()">
+          <ion-avatar item-start>
+            <img src="assets/img/mall_plaza.jpg">
+          </ion-avatar>
+          <p>Avenida Pedro de Heredia, Carrera 13</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 6:00 A.M A 11:00 P.M</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+        <h5 no-margin><strong>Centro Comercial Caribe Plaza</strong></h5>
+        <ion-item detail-none on-click="goToVidaNocturna()">
+          <ion-avatar item-start>
+            <img src="assets/img/caribe_plaza.jpg">
+          </ion-avatar>
+          <p>Av. El Lago, Cra. 22 #22-108</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 6:00 A.M A 11:00 P.M</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+        <h5 no-margin><strong>Centro Comercial Centro Uno</strong></h5>
+        <ion-item detail-none on-click="goToVidaNocturna()">
+          <ion-avatar item-start>
+            <img src="assets/img/centro_uno.jpg">
+          </ion-avatar>
+          <p>Centro, Cra44, Venezuela #8A</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 6:00 A.M A 11:00 P.M</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+        <h5 no-margin><strong>Centro Comercial Portal de San Felipe</strong></h5>
+        <ion-item detail-none on-click="goToVidaNocturna()">
+          <ion-avatar item-start>
+            <img src="assets/img/portal_san_felipe.jpg">
+          </ion-avatar>
+          <p>Pie del Cerro, Cl. 30 #17-109</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 6:00 A.M A 11:00 P.M</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

@@ -4,9 +4,7 @@ import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
-import {
- 
-} from '@ionic/cloud-angular';
+import {} from '@ionic/cloud-angular';
 
 import { MyApp } from './app.component';
 
@@ -14,9 +12,20 @@ import { MyApp } from './app.component';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { InicioDeSesionPage } from '../pages/inicio-de-sesion/inicio-de-sesion';
 import { CategoriasPage } from '../pages/categorias/categorias';
-import { CercaDeMPage } from '../pages/cerca-de-m/cerca-de-m';
+// import { CercaDeMPage } from '../pages/cerca-de-m/cerca-de-m';
 import { ReservaExitosaPage } from '../pages/reserva-exitosa/reserva-exitosa';
-import { VidaNocturnaPage } from '../pages/vida-nocturna/vida-nocturna';
+import { VidaNocturnaPage } from '../pages/sitios/vida-nocturna';
+import { RestaurantesPage } from '../pages/sitios/restaurantes';
+import { PlanesCulturalesPage } from '../pages/sitios/planes-culturales';
+import { ShoppingPage } from '../pages/sitios/shopping';
+import { FragmaPage } from '../pages/sitios/vida-nocturna/fragma';
+import { MrDrinkPage } from '../pages/sitios/vida-nocturna/mrdrink';
+import { BabarPage } from '../pages/sitios/vida-nocturna/babar';
+import { AlquimicoPage } from '../pages/sitios/vida-nocturna/alquimico';
+import { LaVitrolaPage } from '../pages/sitios/restaurantes/la-vitrola';
+import { DonaFridaPage } from '../pages/sitios/restaurantes/dona-frida';
+import { LaGirolataPage } from '../pages/sitios/restaurantes/la-girolata';
+import { SalouPage } from '../pages/sitios/restaurantes/salou';
 import { ReservasEnLineaPage } from '../pages/reservas-en-linea/reservas-en-linea';
 import { RegistroPage } from '../pages/registro/registro';
 import { LoadingSpinner } from '../services/LoadingSpinner';
@@ -83,9 +92,19 @@ const cloudSettings: CloudSettings = {
     WelcomePage,
     InicioDeSesionPage,
     CategoriasPage,
-    CercaDeMPage,
     ReservaExitosaPage,
     VidaNocturnaPage,
+    RestaurantesPage,
+    PlanesCulturalesPage,
+    ShoppingPage,
+    FragmaPage,
+    MrDrinkPage,
+    BabarPage,
+    AlquimicoPage,
+    LaVitrolaPage,
+    DonaFridaPage,
+    LaGirolataPage,
+    SalouPage,
     ReservasEnLineaPage,
     RegistroPage,
     TabsPage
@@ -110,11 +129,22 @@ const cloudSettings: CloudSettings = {
     WelcomePage,
     InicioDeSesionPage,
     CategoriasPage,
-    CercaDeMPage,
+    // CercaDeMPage,
     ReservaExitosaPage,
     VidaNocturnaPage,
+    RestaurantesPage,
     ReservasEnLineaPage,
     RegistroPage,
+    PlanesCulturalesPage,
+    ShoppingPage,
+    FragmaPage,
+    MrDrinkPage,
+    BabarPage,
+    AlquimicoPage,
+    LaVitrolaPage,
+    DonaFridaPage,
+    LaGirolataPage,
+    SalouPage,
     TabsPage
   ],
   providers: [

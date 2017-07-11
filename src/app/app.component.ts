@@ -6,12 +6,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
 
 import { WelcomePage } from '../pages/welcome/welcome';
-import { InicioDeSesionPage } from '../pages/inicio-de-sesion/inicio-de-sesion';
-import { CategoriasPage } from '../pages/categorias/categorias';
-import { CercaDeMPage } from '../pages/cerca-de-m/cerca-de-m';
-import { ReservaExitosaPage } from '../pages/reserva-exitosa/reserva-exitosa';
-import { VidaNocturnaPage } from '../pages/vida-nocturna/vida-nocturna';
-import { ReservasEnLineaPage } from '../pages/reservas-en-linea/reservas-en-linea';
 import { RegistroPage } from '../pages/registro/registro';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Push, PushToken } from '@ionic/cloud-angular';

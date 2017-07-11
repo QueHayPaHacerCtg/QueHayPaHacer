@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController } from 'ionic-angular';
 import { NativeStorage } from 'ionic-native';
-import { CategoriasPage } from '../categorias/categorias';
-import { CercaDeMPage } from '../cerca-de-m/cerca-de-m';
+import { TabsPage } from '../tabs/tabs';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { InicioDeSesionPage } from "../inicio-de-sesion/inicio-de-sesion";
 
@@ -38,7 +37,7 @@ export class RegistroPage {
   }
 
   ionViewDidLoad() {
-    NativeStorage.getItem('user').then(data =>
+    NativeStorage.getItem('userFB').then(data =>
       this.data = data,
       error =>
         console.log("OK")
@@ -66,12 +65,9 @@ export class RegistroPage {
     }
 
   }
-  goToCategorias(params) {
+  goToTabs(params) {
     if (!params) params = {};
-    this.navCtrl.push(CategoriasPage);
-  } goToCercaDeM(params) {
-    if (!params) params = {};
-    this.navCtrl.push(CercaDeMPage);
+    this.navCtrl.push(TabsPage);
   } onGetDatos(params) {
     if (!params) {
       this.http.get(this.address).map(
@@ -127,7 +123,7 @@ export class RegistroPage {
 
           switch (this.response.tipoAutenticacion) {
             case 'FB' || 'IG': {
-              nav.push(CategoriasPage);
+              nav.push(TabsPage);
               break;
             }
             default: {

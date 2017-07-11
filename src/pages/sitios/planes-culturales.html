@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Planes Culturales
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding style="background-color:#FFFFFF;" id="page3">
+  <form id="vidaNocturna-form4">
+    <ion-searchbar placeholder="PLANES CULTURALES" name="" id="vidaNocturna-search2"></ion-searchbar>
+  </form>
+  <div padding-horizontal style="background-color:white;">
+    <div id="cercaDeM-markdown4" style="text-align:right;" class="show-list-numbers-and-dots">
+      <br>
+      <p>{{hoy | date:'fullDate'}}</p>
+    </div>
+    <div>
+      <ion-list>
+        <h5 no-margin><strong>Concierto Dance Hall</strong></h5>
+        <ion-item detail-none on-click="goToVidaNocturna()">
+          <ion-avatar item-start>
+            <img src="assets/img/flow_cartagena.jpg">
+          </ion-avatar>
+          <p>Centro, Cra 2#36-86</p>
+          <p text-wrap style="font-size: 13px"><strong>Evento:</strong> DJ Alfonso Padilla en Vivo</p>
+          <p text-wrap style="font-size: 13px"><strong>Cover:</strong> $20.000</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+        <h5 no-margin><strong>Rey de Rocha</strong></h5>
+        <ion-item detail-none on-click="goToVidaNocturna()">
+          <ion-avatar item-start>
+            <img src="assets/img/rey_de_rocha.jpg">
+          </ion-avatar>
+          <p>Av. Pedro de Heredia, Plaza de Toros Cartagena</p>
+          <p text-wrap style="font-size: 13px"><strong>Evento:</strong> Artistas del Volumen Nuevo</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 10:00 P.M A 4:00 P.M</p>
+          <p text-wrap style="font-size: 13px"><strong>Cover:</strong> $10.000</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+        <h5 no-margin><strong>Muestra de Arte</strong></h5>
+        <ion-item detail-none on-click="goToVidaNocturna()">
+          <ion-avatar item-start>
+            <img src="assets/img/boteroferna.jpg">
+          </ion-avatar>
+          <p>Centro, Cra 2#36-86</p>
+          <p text-wrap style="font-size: 13px"><strong>Evento:</strong> Exhibición Botero</p>
+          <p text-wrap style="font-size: 13px"><strong>Horario:</strong> 2:00 P.M A 7:00 P.M</p>
+          <p text-wrap style="font-size: 13px"><strong>Cover:</strong> $20.000</p>
+          <p item-end style="font-size: 30px;color:gray">></p>
+        </ion-item>
+        <hr/>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
