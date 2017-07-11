@@ -21,6 +21,9 @@
         "phonegap-plugin-push": {
             "SENDER_ID": "939151682913",
             "PACKAGE_NAME": "io.ionic.quehaypahacer"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "io.ionic.quehaypahacer"
         }
     },
     "dependent_plugins": {

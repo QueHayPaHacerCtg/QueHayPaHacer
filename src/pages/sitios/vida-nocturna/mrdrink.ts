@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
-// import { ReservasEnLineaPage } from '../reservas-en-linea/reservas-en-linea';
-// import { ReservaExitosaPage } from '../reserva-exitosa/reserva-exitosa';
+import { ReservasEnLineaPage } from '../../reservas-en-linea/reservas-en-linea';
+import { ReservaExitosaPage } from '../../reserva-exitosa/reserva-exitosa';
 import { Geolocation } from '@ionic-native/geolocation';
 
 declare var google;
@@ -57,11 +57,11 @@ export class MrDrinkPage {
 
   }
 
-  // goToReservasEnLinea(params) {
-  //   if (!params) params = {};
-  //   this.navCtrl.push(ReservasEnLineaPage);
-  // } goToReservaExitosa(params) {
-  //   if (!params) params = {};
-  //   this.navCtrl.push(ReservaExitosaPage);
-  // }
+  goToReservasEnLinea(params) {
+    if (!params) params = {};
+    this.navCtrl.push(ReservasEnLineaPage);
+  } goToReservaExitosa(params) {
+    if (!params) params = {};
+    this.navCtrl.push(ReservaExitosaPage);
+  }
 }

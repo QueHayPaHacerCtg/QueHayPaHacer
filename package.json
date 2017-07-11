@@ -32,7 +32,7 @@
         "@ngx-translate/http-loader": "0.0.3",
         "cordova-android": "^6.2.3",
         "cordova-plugin-compat": "^1.0.0",
-        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-console": "^1.0.7",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-facebook4": "^1.9.1",
         "cordova-plugin-geolocation": "^2.4.3",
@@ -58,7 +58,6 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
@@ -72,7 +71,8 @@
             "cordova-plugin-geolocation": {},
             "phonegap-plugin-push": {
                 "SENDER_ID": "939151682913"
-            }
+            },
+            "cordova-plugin-console": {}
         },
         "platforms": [
             "android"

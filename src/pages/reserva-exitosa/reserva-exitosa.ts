@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { CategoriasPage } from '../categorias/categorias';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-reserva-exitosa',
@@ -14,7 +14,7 @@ export class ReservaExitosaPage {
 
   goToCategorias(params){
     if (!params) params = {};
-    this.navCtrl.push(CategoriasPage);
+    this.navCtrl.push(TabsPage);
   }
   
 }

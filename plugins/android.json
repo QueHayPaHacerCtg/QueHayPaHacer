@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "io.ionic.starter"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "io.ionic.starter"
         },
@@ -38,6 +35,9 @@
         },
         "phonegap-plugin-push": {
             "SENDER_ID": "939151682913",
+            "PACKAGE_NAME": "io.ionic.quehaypahacer"
+        },
+        "cordova-plugin-console": {
             "PACKAGE_NAME": "io.ionic.quehaypahacer"
         }
     },

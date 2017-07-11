@@ -115,7 +115,6 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-console": "1.0.5",
     "cordova-plugin-device": "1.1.4",
     "cordova-plugin-nativestorage": "2.2.2",
     "cordova-plugin-splashscreen": "4.0.3",
@@ -125,7 +124,8 @@ module.exports.metadata =
     "cordova-plugin-facebook4": "1.9.1",
     "cordova-plugin-compat": "1.0.0",
     "cordova-plugin-geolocation": "2.4.3",
-    "phonegap-plugin-push": "1.10.5"
+    "phonegap-plugin-push": "1.10.5",
+    "cordova-plugin-console": "1.0.7"
 }
 // BOTTOM OF METADATA
 });
